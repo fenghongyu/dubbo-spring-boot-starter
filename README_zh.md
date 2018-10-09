@@ -17,7 +17,7 @@ Dubbo Spring Boot Starter。也可以关注dubbo官方的[dubbo-spring-boot-proj
     <dependency>
         <groupId>com.alibaba.spring.boot</groupId>
         <artifactId>dubbo-spring-boot-starter</artifactId>
-        <version>2.0.0</version>
+        <version>0.2.0</version>
     </dependency>
 ```
 
@@ -31,11 +31,11 @@ spring.dubbo.registry=N/A
 
 注：这个配置只针对服务提供端，消费端不用指定协议，它自己会根据服务端的地址信息和@Reference注解去解析协议
 
-* 接下来在Spring Boot Application的上添加`@EnableDubboConfiguration`，表示要开启dubbo功能. (dubbo provider服务可以使用或者不使用web容器)
+* 接下来在Spring Boot Application的上添加`@EnableDubboConfig`，表示要开启dubbo功能. (dubbo provider服务可以使用或者不使用web容器)
 
 ```java
 @SpringBootApplication
-@EnableDubboConfiguration
+@EnableDubboConfig
 public class DubboProviderLauncher {
   //...
 }
